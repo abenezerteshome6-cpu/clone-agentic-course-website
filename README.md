@@ -1,6 +1,6 @@
 # Agentic Engineering — Fieldnotes
 
-A responsive, single-page course-site concept about engineering with AI agents. It is a standalone front-end built with semantic HTML, CSS, and vanilla JavaScript; no build step or package installation is needed.
+A responsive, single-page field guide to engineering with AI agents, presented in the Fieldnotes editorial style. The page includes an end-to-end workflow, a four-part course map, and an accessible FAQ. It is a standalone front end built with semantic HTML, CSS, and vanilla JavaScript; no build step or package installation is needed.
 
 ## Run locally
 
@@ -14,5 +14,7 @@ npx serve .
 
 - Responsive navigation with an accessible mobile menu
 - Nine-step curriculum overview
+- Four practical course tracks, from fundamentals to reusable agent skills
+- Native, keyboard-accessible FAQ disclosures
 - Anchor navigation, reduced-motion support, and a reading progress indicator
-- Original branding and copy with no framework dependencies
+- Original Fieldnotes branding and copy with no framework dependencies

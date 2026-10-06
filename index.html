@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A practical field guide to planning, building, reviewing, and shipping software with AI agents."
+      content="An independent field guide to agentic engineering: plan, build, review, and ship software with AI agents while keeping engineering judgment in the loop."
     />
+    <meta property="og:title" content="Agentic Engineering — Fieldnotes" />
+    <meta
+      property="og:description"
+      content="A field guide for engineers who want to build with AI agents and stay in the driver's seat."
+    />
+    <meta property="og:type" content="website" />
     <meta name="theme-color" content="#10110f" />
-    <title>Agentic Engineering — A field guide for building with AI</title>
+    <title>Agentic Engineering — Fieldnotes</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
@@ -20,7 +26,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Fieldnotes home">
         <span class="brand-mark" aria-hidden="true">f.</span>
-        <span class="brand-name">FIELDNOTES<span class="brand-divider">/</span>LAB</span>
+        <span class="brand-name">FIELDNOTES<span class="brand-divider">/</span>AGENTIC ENGINEERING</span>
       </a>
 
       <button
@@ -36,32 +42,34 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="#approach">The approach</a>
         <a href="#curriculum">Curriculum</a>
+        <a href="#course-map">Course map</a>
         <a href="#story">Why this matters</a>
-        <a class="nav-cta" href="#curriculum">Explore the course <span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" href="#course-map">Explore the course <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero section-shell" id="top">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> A practical field guide <span class="eyebrow-slash">/</span> v.01</p>
-          <h1>Make AI a<br />better <span class="serif-italic">teammate.</span></h1>
+          <p class="eyebrow"><span class="status-dot"></span> FIELDNOTES COURSE <span class="eyebrow-slash">/</span> 01</p>
+          <h1>Agentic<br /><span class="serif-italic">engineering.</span></h1>
           <p class="hero-deck">
-            A hands-on course for engineers who want to work with AI agents
-            thoughtfully—from the first prompt to the final pull request.
+            A practical field guide to building software with AI agents: learn
+            the workflow, keep your engineering judgment, and know what to do
+            when the plan changes.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#curriculum">Explore the workflow <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#approach">See how it works <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#course-map">Explore the course <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#curriculum">Preview the curriculum <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-meta">
-            <span>01 <i>—</i> 09</span>
-            <span>Nine practices. One better loop.</span>
+            <span>FIELD GUIDE <i>—</i> 01</span>
+            <span>Tools change. Judgment travels.</span>
           </div>
         </div>
 
         <div class="hero-art" aria-label="An illustrated map of an agent-assisted development workflow">
-          <div class="art-topline"><span>THE WORKING LOOP</span><span>FIG. 01</span></div>
+          <div class="art-topline"><span>THE ENGINEERING LOOP</span><span>FIELD STUDY 01</span></div>
           <div class="orbit orbit-outer"></div>
           <div class="orbit orbit-inner"></div>
           <div class="orbit-center">
@@ -75,7 +83,7 @@
           <div class="orbit-node node-ship"><span class="node-index">08</span><span>Ship</span></div>
           <span class="art-cross cross-one">+</span>
           <span class="art-cross cross-two">+</span>
-          <div class="art-caption"><span>INTENTION → FEEDBACK → IMPROVEMENT</span><span class="caption-arrow">↗</span></div>
+          <div class="art-caption"><span>PLAN → BUILD → VERIFY → LEARN</span><span class="caption-arrow">↗</span></div>
         </div>
         <a class="hero-scroll" href="#approach"><span class="scroll-line"></span> SCROLL TO EXPLORE</a>
       </section>
@@ -84,14 +92,15 @@
         <div class="section-shell intro-grid">
           <p class="eyebrow"><span class="eyebrow-number">01</span> THE APPROACH</p>
           <div class="intro-content">
-            <h2>Less “let the AI do it.”<br /><span class="muted-heading">More “let’s do this well.”</span></h2>
+            <h2>Use the tools.<br /><span class="muted-heading">Bring the judgment.</span></h2>
             <div class="intro-bottom">
               <p>
-                AI can move quickly. Good engineering still takes direction,
-                context, and a human who knows what “done” should mean. Learn
-                a repeatable way to bring those pieces together.
+                Agent skills and code assistants can accelerate the work.
+                Knowing which tool fits, what to delegate, and whether the
+                result is sound is still an engineering practice. This course
+                focuses on that part.
               </p>
-              <a class="round-link" href="#curriculum" aria-label="Jump to curriculum"><span>↓</span></a>
+              <a class="round-link" href="#course-map" aria-label="Jump to the course map"><span>↓</span></a>
             </div>
           </div>
         </div>
@@ -100,12 +109,13 @@
       <section class="curriculum-section section-shell" id="curriculum">
         <div class="section-heading">
           <div>
-            <p class="eyebrow"><span class="eyebrow-number">02</span> THE FIELD GUIDE</p>
-            <h2>A workflow you<br /><span class="serif-italic">can trust.</span></h2>
+            <p class="eyebrow"><span class="eyebrow-number">01</span> THE WORKFLOW</p>
+            <h2>From first ask<br />to <span class="serif-italic">shipped work.</span></h2>
           </div>
           <p class="heading-note">
-            Nine focused practices for the complete journey: understand the
-            work, make a plan, build in context, and learn from the result.
+            Nine practical practices for the full engineering loop. Follow
+            them in sequence or reach for the one that meets the work in front
+            of you.
           </p>
         </div>
 
@@ -165,43 +175,127 @@
             <div class="stage-aside"><span>RESILIENCE</span><span aria-hidden="true">↗</span></div>
           </article>
         </div>
-        <p class="list-footnote"><span class="status-dot"></span> A practical sequence, not a rigid recipe. Apply the steps that serve the work.</p>
+        <p class="list-footnote"><span class="status-dot"></span> A connected workflow, not a prompt collection. Bring your judgment to every step.</p>
+      </section>
+
+      <section class="course-map-section" id="course-map">
+        <div class="section-shell">
+          <div class="course-map-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-number">02</span> THE COURSE MAP</p>
+              <h2>Practice in the<br /><span class="serif-italic">real world.</span></h2>
+            </div>
+            <p class="heading-note">
+              The work doesn't stop at generating a new feature. Build
+              fundamentals first, then take the workflow into projects with
+              history, constraints, and real consequences.
+            </p>
+          </div>
+
+          <div class="course-track-grid">
+            <article class="track-card">
+              <span class="track-index">FIELD STUDY / 01</span>
+              <span class="track-symbol" aria-hidden="true">◎</span>
+              <h3>Know the system</h3>
+              <p>Get oriented to agent workflows, project context, and the human decisions that keep a change on track.</p>
+              <span class="track-tag">FOUNDATIONS</span>
+            </article>
+            <article class="track-card">
+              <span class="track-index">FIELD STUDY / 02</span>
+              <span class="track-symbol" aria-hidden="true">↗</span>
+              <h3>Build from a blank page</h3>
+              <p>Take a new idea from a defined scope through implementation, verification, and a reviewable handoff.</p>
+              <span class="track-tag">GREENFIELD</span>
+            </article>
+            <article class="track-card">
+              <span class="track-index">FIELD STUDY / 03</span>
+              <span class="track-symbol" aria-hidden="true">↗</span>
+              <h3>Ship into a live project</h3>
+              <p>Use the workflow inside a real codebase: learn its conventions, keep the change focused, and make it ready for review.</p>
+              <span class="track-tag">IN CONTEXT</span>
+            </article>
+            <article class="track-card">
+              <span class="track-index">FIELD STUDY / 04</span>
+              <span class="track-symbol" aria-hidden="true">⌁</span>
+              <h3>Recover with confidence</h3>
+              <p>Make sense of legacy systems and subtle failures, trace what happened, and verify a fix that addresses the cause.</p>
+              <span class="track-tag">LEGACY &amp; DEBUGGING</span>
+            </article>
+            <article class="track-card">
+              <span class="track-index">FIELD STUDY / 05</span>
+              <span class="track-symbol" aria-hidden="true">＋</span>
+              <h3>Shape your own toolkit</h3>
+              <p>Turn repeatable team knowledge into focused instructions and reusable agent skills, then refine them through use.</p>
+              <span class="track-tag">SKILLS &amp; SYSTEMS</span>
+            </article>
+          </div>
+          <p class="map-footnote"><span class="status-dot"></span> Learn the method. Apply it to your tools, your team, and your codebase.</p>
+        </div>
       </section>
 
       <section class="story-section" id="story">
         <div class="section-shell story-grid">
           <div class="story-label">
-            <p class="eyebrow"><span class="eyebrow-number">03</span> WHY THIS MATTERS</p>
+            <p class="eyebrow"><span class="eyebrow-number">03</span> THE REASONING</p>
             <span class="story-stamp">FIELD<br />NOTE <span>— 01</span></span>
           </div>
           <div class="story-copy">
-            <h2>The useful part<br />is knowing <span class="serif-italic">what to do next.</span></h2>
+            <h2>The tools are easy.<br /><span class="serif-italic">The calls are yours.</span></h2>
             <p class="story-lede">
-              There are plenty of tools to try. The harder work is learning
-              when to use them, how to give them direction, and when their
-              answer needs another look.
+              Open-source agent skills are available to everyone. The real
+              learning is choosing the right one for the task, supplying the
+              context it needs, and recognizing when its answer deserves
+              another pass.
             </p>
             <div class="story-rule"></div>
             <div class="story-bottom">
               <span class="story-quote-mark">“</span>
               <p>
-                Keep the human in the loop: make the decisions visible, ask
-                better questions, and use each result to choose a better next
-                move.
+                AI can draft a solution. You own the decisions: check the
+                evidence, protect the codebase, and choose what happens next.
               </p>
-              <a class="text-link" href="#curriculum">See the nine practices <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#curriculum">Explore the workflow <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="closing-section section-shell">
-        <p class="eyebrow"><span class="eyebrow-number">04</span> TAKE IT ONE STEP AT A TIME</p>
-        <div class="closing-grid">
-          <h2>Better work<br />starts with <span class="serif-italic">better questions.</span></h2>
+      <section class="faq-section section-shell" id="faq">
+        <div class="faq-heading">
           <div>
-            <p>Use the workflow as a starting point. Bring your own codebase, your own constraints, and your engineering judgment.</p>
-            <a class="button button-primary" href="#top">Back to the beginning <span aria-hidden="true">↑</span></a>
+            <p class="eyebrow"><span class="eyebrow-number">04</span> FIELD NOTES</p>
+            <h2>A few things<br /><span class="serif-italic">worth knowing.</span></h2>
+          </div>
+          <p class="heading-note">A quick orientation before you get started.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary><span class="faq-index">01</span><span>Is this for engineers who are new to AI coding tools?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+            <p>Yes. Start with the core workflow and bring whichever AI coding assistant you already have access to. The emphasis is on transferable engineering habits, not one vendor's interface.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-index">02</span><span>Is the course about writing prompts?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+            <p>Prompts are one part of the picture. The course also covers scoping work, reading a codebase, planning a change, checking implementation, testing behavior, and making a clear handoff.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-index">03</span><span>Does the workflow apply to existing projects?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+            <p>That's a central use case. The practices include learning a project's conventions before making changes and tracing failures back to their cause rather than patching symptoms.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-index">04</span><span>Do I need a specific AI provider or framework?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+            <p>No specific provider is required by this field guide. Adapt the workflow to the tools, language, and review process you use on your own projects.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="closing-section section-shell">
+        <p class="eyebrow"><span class="eyebrow-number">05</span> PUT THE PRACTICE TO WORK</p>
+        <div class="closing-grid">
+          <h2>Build with AI.<br /><span class="serif-italic">Think like an engineer.</span></h2>
+          <div>
+            <p>Start with one clear task. Keep the context close. Review the result. Then decide on the next move.</p>
+            <a class="button button-primary" href="#curriculum">Start with the workflow <span aria-hidden="true">↑</span></a>
           </div>
         </div>
       </section>
@@ -211,9 +305,9 @@
       <div class="section-shell footer-inner">
         <a class="brand" href="#top" aria-label="Fieldnotes home">
           <span class="brand-mark" aria-hidden="true">f.</span>
-          <span class="brand-name">FIELDNOTES<span class="brand-divider">/</span>LAB</span>
+          <span class="brand-name">FIELDNOTES<span class="brand-divider">/</span>AGENTIC ENGINEERING</span>
         </a>
-        <span class="footer-note">A field guide to working with AI agents.</span>
+        <span class="footer-note">An independent field guide to engineering with AI.</span>
         <a class="footer-top" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
