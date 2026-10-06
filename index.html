@@ -5,21 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="An independent field guide to agentic engineering: plan, build, review, and ship software with AI agents while keeping engineering judgment in the loop."
+      content="Explore Agentic Engineering in two course-page designs: the dark Course layout or the editorial Fieldnotes experience."
     />
-    <meta property="og:title" content="Agentic Engineering — Fieldnotes" />
+    <meta property="og:title" content="Agentic Engineering — Course" />
     <meta
       property="og:description"
-      content="A field guide for engineers who want to build with AI agents and stay in the driver's seat."
+      content="Explore the agentic engineering workflow in the Course or Fieldnotes design."
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#10110f" />
-    <title>Agentic Engineering — Fieldnotes</title>
+    <title>Agentic Engineering — Course</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
+    <div class="design-picker" role="group" aria-label="Choose a course page design">
+      <span class="design-picker-label">PAGE DESIGN</span>
+      <button class="design-option" type="button" data-design-option="course" aria-pressed="true">Course</button>
+      <button class="design-option" type="button" data-design-option="fieldnotes" aria-pressed="false">Fieldnotes</button>
+    </div>
+
+    <div class="design-view course-view" id="course-view">
+      <header class="course-header">
+        <a class="course-brand" href="#course-top" aria-label="Agentic Engineering home">
+          <span class="course-brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>AGENTIC<br /><strong>ENGINEERING</strong></span>
+        </a>
+        <button class="course-menu-toggle" type="button" aria-expanded="false" aria-controls="course-nav" aria-label="Open course navigation">
+          <span></span><span></span>
+        </button>
+        <nav class="course-nav" id="course-nav" aria-label="Course navigation">
+          <a href="#course-approach">The method</a>
+          <a href="#course-curriculum">Curriculum</a>
+          <a href="#course-story">Why this matters</a>
+        </nav>
+        <a class="course-header-cta" href="#course-curriculum">Explore course <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main id="course-main">
+        <section class="course-hero" id="course-top">
+          <div class="course-hero-inner">
+            <div class="course-hero-copy">
+              <p class="course-kicker"><span class="course-live-dot"></span> THE PRACTICE BEHIND AI CODING</p>
+              <h1>In 2026,<br />we are <span>agentic<br class="course-mobile-break" /> engineers.</span></h1>
+              <p class="course-hero-text">
+                A field guide to directing AI agents through real software
+                work—with the engineering judgment to know what to ask, what
+                to trust, and what to do next.
+              </p>
+              <div class="course-hero-actions">
+                <a class="course-primary-button" href="#course-curriculum">Explore the curriculum <span aria-hidden="true">↘</span></a>
+                <a class="course-secondary-link" href="#course-approach">See the approach <span aria-hidden="true">→</span></a>
+              </div>
+              <p class="course-hero-caption"><span>FIELD GUIDE 01</span><span>PLAN / BUILD / VERIFY / LEARN</span></p>
+            </div>
+
+            <div class="course-chart-card" role="img" aria-label="A conceptual chart showing AI output on track and going off track without human engineering judgment">
+              <div class="course-chart-header"><span>THE HUMAN IN THE LOOP</span><span>FIG. 01</span></div>
+              <div class="course-chart-plot">
+                <div class="course-chart-grid"></div>
+                <span class="chart-axis-label chart-axis-y">ENGINEERING JUDGMENT</span>
+                <span class="chart-axis-label chart-axis-x">AGENT OUTPUT OVER TIME</span>
+                <svg class="course-chart-svg" viewBox="0 0 520 260" role="presentation" aria-hidden="true">
+                  <path class="chart-path chart-path-context" d="M12 218 C90 195 145 158 209 119 S322 81 381 119 S456 155 508 44" />
+                  <path class="chart-path chart-path-agent" d="M12 218 C92 201 150 167 209 120 S306 69 344 105 S411 190 508 215" />
+                  <path class="chart-check-line" d="M310 54 V229" />
+                  <circle class="chart-check-point" cx="310" cy="54" r="6" />
+                  <circle class="chart-human-point" cx="381" cy="119" r="5" />
+                </svg>
+                <span class="chart-label chart-label-on">ON TRACK</span>
+                <span class="chart-label chart-label-off">OFF-TRACK</span>
+                <span class="chart-label chart-label-you">YOU DECIDE</span>
+              </div>
+              <div class="course-chart-footer"><span>CONTEXT + REVIEW</span><span>→ BETTER OUTCOMES</span></div>
+            </div>
+          </div>
+          <a class="course-scroll-link" href="#course-approach"><span aria-hidden="true">↓</span> SCROLL TO EXPLORE</a>
+        </section>
+
+        <section class="course-callout section-shell" id="course-approach">
+          <span class="course-callout-check" aria-hidden="true">✓</span>
+          <p>The tools are getting faster. <strong>The engineer is still responsible for where they go.</strong> Learn to direct the work—not just generate the code.</p>
+        </section>
+
+        <section class="course-method section-shell">
+          <div class="course-section-kicker"><span>01</span> / THE METHOD</div>
+          <div class="course-method-content">
+            <h2>AI can generate the code.<br /><span>You own the engineering.</span></h2>
+            <p>Start with a clear goal. Give the agent real context. Review what it returns. Check the behavior. Keep control of the decisions that matter.</p>
+            <div class="course-method-points">
+              <span><b>01</b> Give work a clear scope</span>
+              <span><b>02</b> Read before you change</span>
+              <span><b>03</b> Verify before you ship</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="course-curriculum" id="course-curriculum">
+          <div class="section-shell">
+            <div class="course-curriculum-heading">
+              <div>
+                <div class="course-section-kicker"><span>02</span> / THE CURRICULUM</div>
+                <h2>A working loop,<br /><span>not a bag of prompts.</span></h2>
+              </div>
+              <p>Follow the work from first question to finished change. Each practice connects to the next, and each one keeps the engineer in the loop.</p>
+            </div>
+
+            <div class="course-step-list">
+              <article class="course-step"><span class="course-step-number">01</span><div><span class="course-step-command">/scope</span><h3>Define the job</h3></div><p>Turn a broad request into a concrete, checkable goal before the agent starts working.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">02</span><div><span class="course-step-command">/audit</span><h3>Understand the project</h3></div><p>Read the real code, conventions, and commands so the work begins with context.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">03</span><div><span class="course-step-command">/architect</span><h3>Plan the change</h3></div><p>Make boundaries, files, and decisions explicit before implementation begins.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">04</span><div><span class="course-step-command">/develop</span><h3>Build one step at a time</h3></div><p>Implement in focused increments that fit the project instead of rewriting around it.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">05</span><div><span class="course-step-command">/check</span><h3>Review the result</h3></div><p>Read the diff critically for edge cases, regressions, and gaps in the original ask.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">06</span><div><span class="course-step-command">/test</span><h3>Prove the behavior</h3></div><p>Run meaningful checks against the behavior you set out to change.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">07</span><div><span class="course-step-command">/document</span><h3>Leave useful context</h3></div><p>Record the decisions and instructions that help the next person continue confidently.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">08</span><div><span class="course-step-command">/sync</span><h3>Hand the work over</h3></div><p>Prepare a clear summary and a change teammates can review and discuss.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+              <article class="course-step"><span class="course-step-number">09</span><div><span class="course-step-command">/debug</span><h3>Trace it to the cause</h3></div><p>Reproduce a failure, follow its source, and confirm the fix holds.</p><span class="course-step-arrow" aria-hidden="true">↗</span></article>
+            </div>
+            <p class="course-curriculum-note"><span class="course-live-dot"></span> A practical sequence you can adapt to the task in front of you.</p>
+          </div>
+        </section>
+
+        <section class="course-practice section-shell">
+          <div>
+            <div class="course-section-kicker"><span>03</span> / PUT IT TO WORK</div>
+            <h2>From a new idea<br />to a <span>codebase you inherit.</span></h2>
+          </div>
+          <div class="course-practice-grid">
+            <article><span>FIELD STUDY / 01</span><h3>Start with the fundamentals</h3><p>Build the habits for a useful human-agent working relationship.</p></article>
+            <article><span>FIELD STUDY / 02</span><h3>Make a new thing</h3><p>Scope, plan, develop, and verify a greenfield project.</p></article>
+            <article><span>FIELD STUDY / 03</span><h3>Join a project already moving</h3><p>Work safely with existing code, conventions, and constraints.</p></article>
+            <article><span>FIELD STUDY / 04</span><h3>Recover when plans change</h3><p>Debug unexpected results and follow failures back to their source.</p></article>
+            <article><span>FIELD STUDY / 05</span><h3>Make the practices your own</h3><p>Shape repeatable knowledge into a toolkit that fits how you work.</p></article>
+          </div>
+        </section>
+
+        <section class="course-story" id="course-story">
+          <div class="section-shell course-story-inner">
+            <div class="course-section-kicker"><span>04</span> / WHY THIS MATTERS</div>
+            <div>
+              <h2>Tools can be installed.<br /><span>Judgment takes practice.</span></h2>
+              <p>The skill is deciding what to delegate, what to question, and what to do when the first plan doesn't work. The agent can help with the implementation. The calls are still yours.</p>
+              <a href="#course-curriculum">Return to the workflow <span aria-hidden="true">↑</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="course-faq section-shell">
+          <div class="course-section-kicker"><span>05</span> / FIELD NOTES</div>
+          <h2>Good questions<br /><span>before you begin.</span></h2>
+          <div class="course-faq-list">
+            <details><summary>Do I need a specific AI coding tool?<span>+</span></summary><p>No. The focus is on a working method you can adapt to the tools and project you already use.</p></details>
+            <details><summary>Is this only for brand-new projects?<span>+</span></summary><p>No. The workflow includes understanding and improving existing systems, as well as finding and fixing unexpected behavior.</p></details>
+            <details><summary>Does this teach more than prompt writing?<span>+</span></summary><p>Yes. It covers planning, project context, implementation, review, testing, documentation, handoff, and debugging.</p></details>
+          </div>
+        </section>
+      </main>
+
+      <footer class="course-footer"><div class="section-shell"><a class="course-brand" href="#course-top"><span class="course-brand-mark" aria-hidden="true">&lt;/&gt;</span><span>AGENTIC<br /><strong>ENGINEERING</strong></span></a><span>A practical field guide to engineering with AI.</span><a href="#course-top">BACK TO TOP ↑</a></div></footer>
+    </div>
+
+    <div class="design-view fieldnotes-view" id="fieldnotes-view" hidden>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-progress" aria-hidden="true"><span></span></div>
 
@@ -311,5 +458,6 @@
         <a class="footer-top" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
+    </div>
   </body>
 </html>
