@@ -1,4 +1,48 @@
 const progressBar = document.querySelector(".page-progress span");
+const designViews = {
+  course: document.querySelector("#course-view"),
+  fieldnotes: document.querySelector("#fieldnotes-view"),
+};
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+function selectDesign(selectedDesign, updateAddress = true) {
+  if (!Object.prototype.hasOwnProperty.call(designViews, selectedDesign)) return;
+
+  if (updateAddress) {
+    const url = new URL(window.location.href);
+    if (selectedDesign === "fieldnotes") {
+      url.searchParams.set("design", "fieldnotes");
+    } else {
+      url.searchParams.delete("design");
+    }
+    url.hash = "";
+    window.history.replaceState(null, "", url);
+  }
+
+  Object.entries(designViews).forEach(([design, view]) => {
+    view.hidden = design !== selectedDesign;
+  });
+  document.querySelectorAll("[data-design-option]").forEach((option) => {
+    option.setAttribute(
+      "aria-pressed",
+      String(option.getAttribute("data-design-option") === selectedDesign),
+    );
+  });
+  document.querySelectorAll(".menu-toggle, .course-menu-toggle").forEach((menuToggle) => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute(
+      "aria-label",
+      menuToggle.classList.contains("course-menu-toggle") ? "Open course navigation" : "Open navigation",
+    );
+    document.getElementById(menuToggle.getAttribute("aria-controls"))?.classList.remove("is-open");
+  });
+
+  const isFieldnotes = selectedDesign === "fieldnotes";
+  document.title = isFieldnotes ? "Agentic Engineering — Fieldnotes" : "Agentic Engineering — Course";
+  themeColor?.setAttribute("content", isFieldnotes ? "#10110f" : "#080b0b");
+
+  updatePageProgress();
+}
 
 document.querySelectorAll(".menu-toggle, .course-menu-toggle").forEach((menuToggle) => {
   const nav = document.getElementById(menuToggle.getAttribute("aria-controls"));
@@ -26,30 +70,20 @@ document.querySelectorAll(".menu-toggle, .course-menu-toggle").forEach((menuTogg
 document.querySelectorAll("[data-design-option]").forEach((option) => {
   option.addEventListener("click", () => {
     const selectedDesign = option.getAttribute("data-design-option");
-    if (selectedDesign !== "course" && selectedDesign !== "fieldnotes") return;
+    selectDesign(selectedDesign);
+  });
+});
 
-    document.querySelector("#course-view").hidden = selectedDesign !== "course";
-    document.querySelector("#fieldnotes-view").hidden = selectedDesign !== "fieldnotes";
-    document.querySelectorAll("[data-design-option]").forEach((designOption) => {
-      designOption.setAttribute(
-        "aria-pressed",
-        String(designOption.getAttribute("data-design-option") === selectedDesign),
-      );
-    });
-    document.querySelectorAll(".menu-toggle, .course-menu-toggle").forEach((menuToggle) => {
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute(
-        "aria-label",
-        menuToggle.classList.contains("course-menu-toggle") ? "Open course navigation" : "Open navigation",
-      );
-      document.getElementById(menuToggle.getAttribute("aria-controls"))?.classList.remove("is-open");
-    });
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
 
-    document.title =
-      selectedDesign === "fieldnotes"
-        ? "Agentic Engineering — Fieldnotes"
-        : "Agentic Engineering — Course";
-    updatePageProgress();
+  document.querySelectorAll(".menu-toggle, .course-menu-toggle").forEach((menuToggle) => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute(
+      "aria-label",
+      menuToggle.classList.contains("course-menu-toggle") ? "Open course navigation" : "Open navigation",
+    );
+    document.getElementById(menuToggle.getAttribute("aria-controls"))?.classList.remove("is-open");
   });
 });
 
@@ -75,4 +109,6 @@ window.addEventListener(
   { passive: true },
 );
 
+const initialDesign = new URLSearchParams(window.location.search).get("design");
+selectDesign(initialDesign === "fieldnotes" ? "fieldnotes" : "course", false);
 updatePageProgress();
